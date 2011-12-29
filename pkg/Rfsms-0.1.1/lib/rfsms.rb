@@ -155,7 +155,7 @@ module Rfsms
       super(body)
       @sms = case @sms
       when Hash
-        SMS.new(@sms)
+        [SMS.new(@sms)]
       when Array
         @sms.map {|sms| SMS.new(sms) }
       else

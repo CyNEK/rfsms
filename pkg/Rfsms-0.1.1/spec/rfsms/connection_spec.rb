@@ -8,7 +8,7 @@ describe Rfsms::Connection do
   
   describe "Метод send(message, phones)" do
     it "при отправке SMS по списку правильных номеров должен возвращать ответ (Rfsms::Answer)" do
-      correct_phones = ['89123838878', '8-909-190-9409']
+      correct_phones = [PHONE, '8-909-190-9409']
       send_answer = nil
       lambda { send_answer = @connection.send('test', correct_phones) }.should_not raise_error
       send_answer.should be_an_instance_of(Rfsms::SendAnswer)
@@ -20,7 +20,7 @@ describe Rfsms::Connection do
     end
 
     it "должен возвращать количество отправленных SMS соответствующее количеству корректных номеров" do
-      correct_phones = ['89123838878', '8-909-190-9409']
+      correct_phones = [PHONE, '8-909-190-9409']
       incorrect_phones = ['8912383887', '8-909-190-94097']
       answer = nil
       lambda { answer = @connection.send('test', incorrect_phones.concat(correct_phones)) }.should_not raise_error
@@ -31,7 +31,7 @@ describe Rfsms::Connection do
   describe "Метод report(start, stop)" do
     it "должен получать список рассылки за определенный период при корректно указанных датах начала и конца" do
       start = Time.now - 2.hour
-      correct_phones = ['89123838878']
+      correct_phones = [PHONE]
       @connection.send('test', correct_phones).should be_an_instance_of(Rfsms::SendAnswer)
       stop = Time.now + 2.hour
 
@@ -72,7 +72,7 @@ describe Rfsms::Connection do
     it "должен отменять отложенную SMS (группу SMS) с идентификатором smsid и возвращать Rfsms::CancelAnswer" do
       send_answer = @connection.send(
         "Проверка отмены рассылки",
-        ['89123838878'],
+        [PHONE],
         Time.now + 1.hour
       )
       canceled = @connection.cancel(send_answer.smsid)

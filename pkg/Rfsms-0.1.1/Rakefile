@@ -14,8 +14,8 @@ require 'rake/testtask'
 require 'rspec/core/rake_task'
 
 spec = Gem::Specification.new do |s|
-  s.name = 'Rfsms'
-  s.version = '0.1.1'
+  s.name = 'rfsms'
+  s.version = '0.1.2'
   s.has_rdoc = false
 #  s.extra_rdoc_files = ['README', 'LICENSE']
   s.summary = <<END
