@@ -1,6 +1,6 @@
+#encoding: utf-8
 # Sender SMS via rfsms.ru
 # v0.1.1
-# encoding: utf-8
 
 require 'net/http'
 require 'net/https'
@@ -179,9 +179,14 @@ module Rfsms
       @password = password
     end
 
-    # send(text, phones, datetime = nil, source = nil, onlydelivery = false)
     # отправляет text по указанным phones = [].
-    # phones может быть хэшем где значения - индивидуальный текст
+    # 
+    # @param [String] text текст сообщения
+    # @param [Array<String, Hash>] phones телефоны на которые будет отправлено, может быть хэшем где значения - индивидуальный текст
+    # @param [Time] datetime время в которое необходимо отправить, nil - сейчас
+    # @param [String] source кто отправил
+    # @param [Boolean] onlydelivery)
+    # @return [Rfsms::SendAnswer] 
     def send(text, phones, datetime = nil, source = nil, onlydelivery = false)
       message = message_header
       message << "<text>#{text}</text>"
@@ -216,6 +221,9 @@ module Rfsms
     # получает отчет о списке рассылки при указанных датах начала(start) и
     # конца(stop) типа Time
     # если даты не указаны получает за весь период
+    #
+    # @param [Hash{Symbol => Time}] options :start - начало, :stop - окончание
+    # @return [Rfsms::ReportAnswer]
     def report(options = {})
       message = message_header
       unless options.empty?
@@ -242,7 +250,9 @@ module Rfsms
       end
     end
 
-    # возвращает текущий баланс типа BalanceAnswer
+    # возвращает текущий баланс
+    #
+    # @return [Rfsms::BalanceAnwer]
     def balance
       message = message_header + message_footer
       STDERR.puts "+SENDED:\n"+message+"\n-SENDED\n" if $DEBUG
@@ -257,6 +267,9 @@ module Rfsms
     end
 
     # отменяет СМС с идентификатором smsid
+    #
+    # @param [Integer, String] smsid
+    # @return [Rfsms::CancelAnswer]
     def cancel(smsid)
       message = message_header
       message << <<END
@@ -273,6 +286,7 @@ END
         end
       end
     end
+
   private
 
     # формирует заголовок с данными авторизации
