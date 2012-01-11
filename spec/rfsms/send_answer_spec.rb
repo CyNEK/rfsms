@@ -19,23 +19,23 @@ describe Rfsms::SendAnswer do
         <price>0.38</price>
       </data>
     ANSWER
-    @correct_answer_elements_for_2sms = Nori.parse(@correct_answer_body_for_2sms, :nokogiri)['data']
+    @correct_answer_elements_for_2sms = Nori.parse(@correct_answer_body_for_2sms, :nokogiri)[:data]
   end
 
   describe "конструктор" do
     it "при корректных входных данных должен создавать экземпляр с соответствующими входу полями" do
       send_answer = Rfsms::SendAnswer.new(@correct_answer_body_for_2sms)
       send_answer.should be_an_instance_of(Rfsms::SendAnswer)
-      send_answer.descr.should be == @correct_answer_elements_for_2sms['descr']
-      send_answer.smsid.should be == @correct_answer_elements_for_2sms['smsid']
-      send_answer.datetime.should be == DateTime.strptime(@correct_answer_elements_for_2sms['datetime'], DATETIME_FORMAT)
-      send_answer.action.should be == @correct_answer_elements_for_2sms['action']
-      send_answer.all_recivers.should be == @correct_answer_elements_for_2sms['allRecivers'].to_i
-      send_answer.col_send_abonent.should be == @correct_answer_elements_for_2sms['colSendAbonent'].to_i
-      send_answer.col_non_send_abonent.should be == @correct_answer_elements_for_2sms['colNonSendAbonent'].to_i
-      send_answer.price_of_sending.should be == @correct_answer_elements_for_2sms['priceOfSending'].to_f
-      send_answer.colsms_of_sending.should be == @correct_answer_elements_for_2sms['colsmsOfSending'].to_i
-      send_answer.price.should be == @correct_answer_elements_for_2sms['price'].to_f
+      send_answer.descr.should be == @correct_answer_elements_for_2sms[:descr]
+      send_answer.smsid.should be == @correct_answer_elements_for_2sms[:smsid]
+      send_answer.datetime.should be == DateTime.strptime(@correct_answer_elements_for_2sms[:datetime], DATETIME_FORMAT)
+      send_answer.action.should be == @correct_answer_elements_for_2sms[:action]
+      send_answer.all_recivers.should be == @correct_answer_elements_for_2sms[:all_recivers].to_i
+      send_answer.col_send_abonent.should be == @correct_answer_elements_for_2sms[:col_send_abonent].to_i
+      send_answer.col_non_send_abonent.should be == @correct_answer_elements_for_2sms[:col_non_send_abonent].to_i
+      send_answer.price_of_sending.should be == @correct_answer_elements_for_2sms[:price_of_sending].to_f
+      send_answer.colsms_of_sending.should be == @correct_answer_elements_for_2sms[:colsms_of_sending].to_i
+      send_answer.price.should be == @correct_answer_elements_for_2sms[:price].to_f
     end
 
     it "при значении элемента code отличного от 1 должен вызывать исключение Rfsms::AnswerError" do

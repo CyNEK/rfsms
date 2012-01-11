@@ -7,6 +7,11 @@ require 'net/https'
 require 'nori'
 require 'i18n'
 require 'active_support/all'
+
+Nori.configure do |config|
+  config.convert_tags_to { |tag| tag.to_s.underscore.to_sym }
+end
+
 module Rfsms
   DATEREGEXP = /^\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[1-2]\d|3[01]) (?:[01]\d|2[0-4]):(?:[0-5]\d):(?:[0-5]\d)$/
   DATEFORMAT = "%Y-%m-%d %H:%M:%S"
@@ -25,15 +30,15 @@ module Rfsms
       body_e = Nori.parse(body, :nokogiri)
       p body_e if $DEBUG
 
-      elements = body_e['data']
-      raise IncorrectAnswerError unless Hash === elements
+      elements = body_e[:data]
+      raise IncorrectAnswerError unless elements.is_a?(Hash)
       p elements if $DEBUG
       
-      if code = elements.delete('code') and @descr = elements.delete('descr')
+      if code = elements.delete(:code) and @descr = elements.delete(:descr)
         if code == '1'
           raise IncorrectAnswerError if validate and !validate.call(elements)
           elements.each_pair do |tag, value|
-            instance_variable_set("@#{tag.underscore}".to_sym, value)
+            instance_variable_set(:"@#{tag}", value)
           end
         else
           raise AnswerError, "#{code}: #{@descr}"
@@ -49,7 +54,7 @@ module Rfsms
 
     def initialize(body)
       super(body) do |e|
-        e['action'] =~ /^(?:check|make)$/
+        e[:action] =~ /^(?:check|make)$/
       end
       @cancel_col = @cancel_col.to_i
     end
@@ -62,15 +67,15 @@ module Rfsms
 
     def initialize(body)
       super(body) do |e|
-        e.has_key?('smsid') and
-        e['datetime'] =~ DATEREGEXP and
-        e['action'] =~ /^(?:check|make|send)$/ and
-        e['allRecivers'] =~ INTEGER_REGEXP and
-        e['colSendAbonent'] =~ INTEGER_REGEXP and
-        e['colNonSendAbonent'] =~ INTEGER_REGEXP and
-        e['priceOfSending'] =~ FLOAT_REGEXP and
-        e['colsmsOfSending'] =~ INTEGER_REGEXP and
-        e['price'] =~ FLOAT_REGEXP
+        e.has_key?(:smsid) and
+        e[:datetime] =~ DATEREGEXP and
+        e[:action] =~ /^(?:check|make|send)$/ and
+        e[:all_recivers] =~ INTEGER_REGEXP and
+        e[:col_send_abonent] =~ INTEGER_REGEXP and
+        e[:col_non_send_abonent] =~ INTEGER_REGEXP and
+        e[:price_of_sending] =~ FLOAT_REGEXP and
+        e[:colsms_of_sending] =~ INTEGER_REGEXP and
+        e[:price] =~ FLOAT_REGEXP
       end
       @datetime = DateTime.strptime(@datetime, DATEFORMAT)
       @all_recivers = @all_recivers.to_i
@@ -122,7 +127,7 @@ module Rfsms
 
     def initialize(body)
       super(body) do |e|
-        e['account'] =~ FLOAT_REGEXP
+        e[:account] =~ FLOAT_REGEXP
       end
       @account = @account.to_f
     end
@@ -136,16 +141,16 @@ module Rfsms
 
       def initialize(elements)
         p elements if $DEBUG
-        unless @smsid = elements['smsid'] and
-              @datetime = elements['datetime'] and @datetime =~ DATEREGEXP and
-              @text = elements['text'] and
-              @source = elements['source'] and
-              @all_col = elements['allCol'] and
-              @delivered_col = elements['deliveredCol'] and
-              @not_delivered_col = elements['notDeliveredCol'] and
-              @waiting_col = elements['waitingCol'] and
-              @enqueued_col = elements['enqueuedCol'] and
-              @payment = elements['payment']
+        unless @smsid = elements[:smsid] and
+              @datetime = elements[:datetime] and @datetime =~ DATEREGEXP and
+              @text = elements[:text] and
+              @source = elements[:source] and
+              @all_col = elements[:all_col] and
+              @delivered_col = elements[:delivered_col] and
+              @not_delivered_col = elements[:not_delivered_col] and
+              @waiting_col = elements[:waiting_col] and
+              @enqueued_col = elements[:enqueued_col] and
+              @payment = elements[:payment]
           raise IncorrectAnswerError
         end
       end

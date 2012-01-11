@@ -10,15 +10,15 @@ describe Rfsms::CancelAnswer do
         <action>make</action>
       </data>
     ANSWER
-    @correct_elements = Nori.parse(@correct_body, :nokogiri)['data']
+    @correct_elements = Nori.parse(@correct_body, :nokogiri)[:data]
   end
 
   describe "конструктор" do
     it "при корректных входных данных создает экземпляр ответа с соответствующими входу полями" do
       cancel_answer = Rfsms::CancelAnswer.new(@correct_body)
       cancel_answer.should be_an_instance_of(Rfsms::CancelAnswer)
-      cancel_answer.descr.should be == @correct_elements['descr']
-      cancel_answer.action.should be == @correct_elements['action']
+      cancel_answer.descr.should be == @correct_elements[:descr]
+      cancel_answer.action.should be == @correct_elements[:action]
     end
 
     it "при отсутствии одного из входных элементов вызывает исключение Rfsms::IncorrectAnswerError" do

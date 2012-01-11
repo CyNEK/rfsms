@@ -10,14 +10,14 @@ describe Rfsms::BalanceAnswer do
         <account>10000.94</account>
       </data>
     ANSWER
-    @correct_elements = Nori.parse(@correct_body, :nokogiri)['data']
+    @correct_elements = Nori.parse(@correct_body, :nokogiri)[:data]
   end
 
   it "при корректных входных данных конструктор создает объект с соответствующими входу полями" do
     correct_balance_answer = Rfsms::BalanceAnswer.new(@correct_body)
     correct_balance_answer.should be_an_instance_of(Rfsms::BalanceAnswer)
-    correct_balance_answer.descr.should be == @correct_elements['descr']
-    correct_balance_answer.account.should be == @correct_elements['account'].to_f
+    correct_balance_answer.descr.should be == @correct_elements[:descr]
+    correct_balance_answer.account.should be == @correct_elements[:account].to_f
   end
 
   it "при отсутствии одного из входных элементов конструктор вызывает исключение Rfsms::IncorrectAnswerError" do

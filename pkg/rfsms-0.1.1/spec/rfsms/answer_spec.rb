@@ -9,14 +9,14 @@ describe Rfsms::Answer do
         <descr>Операция успешно завершена</descr>
       </data>
     ANSWER
-    @correct_elements = Nori.parse(@correct_body, :nokogiri)['data']
+    @correct_elements = Nori.parse(@correct_body, :nokogiri)[:data]
   end
 
   describe "конструктор" do
     it "при корректных входных данных должен создавать экземпляр с соответствующими входу полями" do
       answer = Rfsms::Answer.new(@correct_body)
       answer.should be_an_instance_of(Rfsms::Answer)
-      answer.descr.should be == @correct_elements['descr']
+      answer.descr.should be == @correct_elements[:descr]
     end
 
     it "при значении элемента code отличного от 1 должен вызывать исключение Rfsms::AnswerError" do

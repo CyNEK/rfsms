@@ -6,8 +6,7 @@ require 'rubygems'
 require 'rake'
 require 'rake/clean'
 require 'rake/gempackagetask'
-#require 'rubygems/package_task'
-require 'rake/rdoctask'
+#require 'rake/rdoctask'
 #require 'rdoc/task'
 require 'rake/testtask'
 #require 'spec/rake/spectask'
@@ -15,17 +14,17 @@ require 'rspec/core/rake_task'
 
 spec = Gem::Specification.new do |s|
   s.name = 'rfsms'
-  s.version = '0.1.2'
+  s.version = '0.1.1'
   s.has_rdoc = false
 #  s.extra_rdoc_files = ['README', 'LICENSE']
   s.summary = <<END
-Rfsms is sender SMS via rfsms.ru
+rfsms is sender SMS via rfsms.ru
 END
   s.description = s.summary
   s.author = 'Danil Korotaev'
-  s.email = 'deusnet@mail.ru'
+  s.email = 'greyd@mail333.com'
   # s.executables = ['your_executable_here']
-  s.files = %w(LICENSE README Rakefile) + Dir.glob("{bin,lib,spec}/**/*")
+  s.files = %w(Rakefile) + Dir.glob("{bin,lib,spec}/**/*")
   s.require_path = "lib"
   s.bindir = "bin"
   s.add_dependency 'nokogiri', ">=1.5.0"
