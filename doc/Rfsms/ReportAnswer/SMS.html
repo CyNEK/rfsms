@@ -1,0 +1,904 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Rfsms::ReportAnswer::SMS
+  
+    &mdash; Documentation by YARD 0.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '../..';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (S)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../../Rfsms.html" title="Rfsms (module)">Rfsms</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../ReportAnswer.html" title="Rfsms::ReportAnswer (class)">ReportAnswer</a></span></span>
+     &raquo; 
+    <span class="title">SMS</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Rfsms::ReportAnswer::SMS
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Rfsms::ReportAnswer::SMS</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/rfsms.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#all_col-instance_method" title="#all_col (instance method)">- (Object) <strong>all_col</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute all_col.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#datetime-instance_method" title="#datetime (instance method)">- (Object) <strong>datetime</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute datetime.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delivered_col-instance_method" title="#delivered_col (instance method)">- (Object) <strong>delivered_col</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute delivered_col.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#enqueued_col-instance_method" title="#enqueued_col (instance method)">- (Object) <strong>enqueued_col</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute enqueued_col.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#not_delivered_col-instance_method" title="#not_delivered_col (instance method)">- (Object) <strong>not_delivered_col</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute not_delivered_col.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#payment-instance_method" title="#payment (instance method)">- (Object) <strong>payment</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute payment.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#smsid-instance_method" title="#smsid (instance method)">- (Object) <strong>smsid</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute smsid.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#source-instance_method" title="#source (instance method)">- (Object) <strong>source</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute source.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#text-instance_method" title="#text (instance method)">- (Object) <strong>text</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute text.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#waiting_col-instance_method" title="#waiting_col (instance method)">- (Object) <strong>waiting_col</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute waiting_col.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (SMS) <strong>initialize</strong>(elements) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of SMS.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Rfsms::ReportAnswer::SMS (class)">SMS</a></span></tt>) <strong>initialize</strong>(elements) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>A new instance of SMS</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rfsms.rb', line 142</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_elements'>elements</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_elements'>elements</span> <span class='kw'>if</span> <span class='gvar'>$DEBUG</span>
+  <span class='kw'>unless</span> <span class='ivar'>@smsid</span> <span class='op'>=</span> <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='symbol'>:smsid</span><span class='rbracket'>]</span> <span class='kw'>and</span>
+        <span class='ivar'>@datetime</span> <span class='op'>=</span> <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='symbol'>:datetime</span><span class='rbracket'>]</span> <span class='kw'>and</span> <span class='ivar'>@datetime</span> <span class='op'>=~</span> <span class='const'>DATEREGEXP</span> <span class='kw'>and</span>
+        <span class='ivar'>@text</span> <span class='op'>=</span> <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='symbol'>:text</span><span class='rbracket'>]</span> <span class='kw'>and</span>
+        <span class='ivar'>@source</span> <span class='op'>=</span> <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='symbol'>:source</span><span class='rbracket'>]</span> <span class='kw'>and</span>
+        <span class='ivar'>@all_col</span> <span class='op'>=</span> <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='symbol'>:all_col</span><span class='rbracket'>]</span> <span class='kw'>and</span>
+        <span class='ivar'>@delivered_col</span> <span class='op'>=</span> <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='symbol'>:delivered_col</span><span class='rbracket'>]</span> <span class='kw'>and</span>
+        <span class='ivar'>@not_delivered_col</span> <span class='op'>=</span> <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='symbol'>:not_delivered_col</span><span class='rbracket'>]</span> <span class='kw'>and</span>
+        <span class='ivar'>@waiting_col</span> <span class='op'>=</span> <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='symbol'>:waiting_col</span><span class='rbracket'>]</span> <span class='kw'>and</span>
+        <span class='ivar'>@enqueued_col</span> <span class='op'>=</span> <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='symbol'>:enqueued_col</span><span class='rbracket'>]</span> <span class='kw'>and</span>
+        <span class='ivar'>@payment</span> <span class='op'>=</span> <span class='id identifier rubyid_elements'>elements</span><span class='lbracket'>[</span><span class='symbol'>:payment</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>IncorrectAnswerError</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <span id="all_col-instance_method"></span>
+      <div class="method_details first">
+  <p class="signature first" id="all_col-instance_method">
+  
+    - (<tt>Object</tt>) <strong>all_col</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute all_col</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rfsms.rb', line 139</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_all_col'>all_col</span>
+  <span class='ivar'>@all_col</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="datetime-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="datetime-instance_method">
+  
+    - (<tt>Object</tt>) <strong>datetime</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute datetime</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rfsms.rb', line 139</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_datetime'>datetime</span>
+  <span class='ivar'>@datetime</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="delivered_col-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="delivered_col-instance_method">
+  
+    - (<tt>Object</tt>) <strong>delivered_col</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute delivered_col</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rfsms.rb', line 139</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delivered_col'>delivered_col</span>
+  <span class='ivar'>@delivered_col</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="enqueued_col-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="enqueued_col-instance_method">
+  
+    - (<tt>Object</tt>) <strong>enqueued_col</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute enqueued_col</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rfsms.rb', line 139</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_enqueued_col'>enqueued_col</span>
+  <span class='ivar'>@enqueued_col</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="not_delivered_col-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="not_delivered_col-instance_method">
+  
+    - (<tt>Object</tt>) <strong>not_delivered_col</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute not_delivered_col</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rfsms.rb', line 139</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_not_delivered_col'>not_delivered_col</span>
+  <span class='ivar'>@not_delivered_col</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="payment-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="payment-instance_method">
+  
+    - (<tt>Object</tt>) <strong>payment</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute payment</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rfsms.rb', line 139</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_payment'>payment</span>
+  <span class='ivar'>@payment</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="smsid-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="smsid-instance_method">
+  
+    - (<tt>Object</tt>) <strong>smsid</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute smsid</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rfsms.rb', line 139</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_smsid'>smsid</span>
+  <span class='ivar'>@smsid</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="source-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="source-instance_method">
+  
+    - (<tt>Object</tt>) <strong>source</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute source</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rfsms.rb', line 139</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_source'>source</span>
+  <span class='ivar'>@source</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="text-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="text-instance_method">
+  
+    - (<tt>Object</tt>) <strong>text</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute text</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rfsms.rb', line 139</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_text'>text</span>
+  <span class='ivar'>@text</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="waiting_col-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="waiting_col-instance_method">
+  
+    - (<tt>Object</tt>) <strong>waiting_col</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute waiting_col</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rfsms.rb', line 139</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_waiting_col'>waiting_col</span>
+  <span class='ivar'>@waiting_col</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+</div>
+    
+    <div id="footer">
+  Generated on Wed Jan 11 12:17:37 2012 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.7.4 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,777 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Rfsms::Connection
+  
+    &mdash; Documentation by YARD 0.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (C)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../Rfsms.html" title="Rfsms (module)">Rfsms</a></span></span>
+     &raquo; 
+    <span class="title">Connection</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Rfsms::Connection
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Rfsms::Connection</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/rfsms.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#balance-instance_method" title="#balance (instance method)">- (Rfsms::BalanceAnwer) <strong>balance</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>???????????????????? ?????????????? ????????????.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cancel-instance_method" title="#cancel (instance method)">- (Rfsms::CancelAnswer) <strong>cancel</strong>(smsid) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>???????????????? ?????? ?? ?????????????????????????????? smsid.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Connection) <strong>initialize</strong>(url, login, password) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Connection.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#report-instance_method" title="#report (instance method)">- (Rfsms::ReportAnswer) <strong>report</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>???????????????? ?????????? ?? ???????????? ???????????????? ??????
+?????????????????? ?????????? ????????????(start) ?? ??????????(stop)
+???????? Time ???????? ???????? ???? ?????????????? ???????????????? ????
+???????? ????????????.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send-instance_method" title="#send (instance method)">- (Rfsms::SendAnswer) <strong>send</strong>(text, phones, datetime = nil, source = nil, onlydelivery = false) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>???????????????????? text ???? ?????????????????? phones = [].</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Rfsms::Connection (class)">Connection</a></span></tt>) <strong>initialize</strong>(url, login, password) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>A new instance of Connection</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+173
+174
+175
+176
+177
+178
+179
+180</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rfsms.rb', line 173</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='id identifier rubyid_login'>login</span><span class='comma'>,</span> <span class='id identifier rubyid_password'>password</span><span class='rparen'>)</span>
+  <span class='ivar'>@uri</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
+  <span class='ivar'>@connection</span> <span class='op'>=</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTP</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@uri</span><span class='period'>.</span><span class='id identifier rubyid_host'>host</span><span class='comma'>,</span> <span class='ivar'>@uri</span><span class='period'>.</span><span class='id identifier rubyid_port'>port</span><span class='rparen'>)</span>
+  <span class='ivar'>@connection</span><span class='period'>.</span><span class='id identifier rubyid_use_ssl'>use_ssl</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@connection</span><span class='period'>.</span><span class='id identifier rubyid_verify_mode'>verify_mode</span> <span class='op'>=</span> <span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>SSL</span><span class='op'>::</span><span class='const'>VERIFY_NONE</span>
+  <span class='ivar'>@login</span> <span class='op'>=</span> <span class='id identifier rubyid_login'>login</span>
+  <span class='ivar'>@password</span> <span class='op'>=</span> <span class='id identifier rubyid_password'>password</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="balance-instance_method">
+  
+    - (<tt>Rfsms::BalanceAnwer</tt>) <strong>balance</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>???????????????????? ?????????????? ????????????</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Rfsms::BalanceAnwer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rfsms.rb', line 256</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_balance'>balance</span>
+  <span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='id identifier rubyid_message_header'>message_header</span> <span class='op'>+</span> <span class='id identifier rubyid_message_footer'>message_footer</span>
+  <span class='const'>STDERR</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+SENDED:\n</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='id identifier rubyid_message'>message</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n-SENDED\n</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='gvar'>$DEBUG</span>
+  <span class='ivar'>@connection</span><span class='period'>.</span><span class='id identifier rubyid_request_post'>request_post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/balance.xml</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_response'>response</span><span class='op'>|</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_response'>response</span>
+    <span class='kw'>when</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTPSuccess</span>
+      <span class='kw'>return</span> <span class='const'>BalanceAnswer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_error!'>error!</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="cancel-instance_method">
+  
+    - (<tt><span class='object_link'><a href="CancelAnswer.html" title="Rfsms::CancelAnswer (class)">Rfsms::CancelAnswer</a></span></tt>) <strong>cancel</strong>(smsid) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>???????????????? ?????? ?? ?????????????????????????????? smsid</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>smsid</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="CancelAnswer.html" title="Rfsms::CancelAnswer (class)">Rfsms::CancelAnswer</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rfsms.rb', line 273</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_cancel'>cancel</span><span class='lparen'>(</span><span class='id identifier rubyid_smsid'>smsid</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='id identifier rubyid_message_header'>message_header</span>
+  <span class='id identifier rubyid_message'>message</span> <span class='op'>&lt;&lt;</span> <span class='heredoc_beg'>&lt;&lt;END</span>
+<span class='tstring_content'>&lt;smsid&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_smsid'>smsid</span><span class='rbrace'>}</span><span class='tstring_content'>&lt;/smsid&gt;
+</span><span class='heredoc_end'>END
+</span>  <span class='id identifier rubyid_message'>message</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_message_footer'>message_footer</span>
+  <span class='const'>STDERR</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+SENDED:\n</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='id identifier rubyid_message'>message</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n-SENDED\n</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='gvar'>$DEBUG</span>
+  <span class='ivar'>@connection</span><span class='period'>.</span><span class='id identifier rubyid_request_post'>request_post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/cancel.xml</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_response'>response</span><span class='op'>|</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_response'>response</span>
+    <span class='kw'>when</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTPSuccess</span>
+      <span class='kw'>return</span> <span class='const'>CancelAnswer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_error!'>error!</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="report-instance_method">
+  
+    - (<tt><span class='object_link'><a href="ReportAnswer.html" title="Rfsms::ReportAnswer (class)">Rfsms::ReportAnswer</a></span></tt>) <strong>report</strong>(options = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>???????????????? ?????????? ?? ???????????? ???????????????? ??????
+?????????????????? ?????????? ????????????(start) ?? ??????????(stop)
+???????? Time ???????? ???????? ???? ?????????????? ???????????????? ????
+???????? ????????????</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash{Symbol =&gt; Time}</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>:start - ????????????, :stop - ??????????????????</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="ReportAnswer.html" title="Rfsms::ReportAnswer (class)">Rfsms::ReportAnswer</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rfsms.rb', line 227</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_report'>report</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='id identifier rubyid_message_header'>message_header</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='id identifier rubyid_start'>start</span><span class='comma'>,</span> <span class='id identifier rubyid_stop'>stop</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:start</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_strftime'>strftime</span><span class='lparen'>(</span><span class='const'>DATEFORMAT</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:stop</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_strftime'>strftime</span><span class='lparen'>(</span><span class='const'>DATEFORMAT</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_start'>start</span> <span class='op'>=~</span> <span class='const'>DATEREGEXP</span> <span class='kw'>and</span> <span class='id identifier rubyid_stop'>stop</span> <span class='op'>=~</span> <span class='const'>DATEREGEXP</span>
+      <span class='id identifier rubyid_message'>message</span> <span class='op'>&lt;&lt;</span> <span class='heredoc_beg'>&lt;&lt;-PERIOD</span>
+<span class='tstring_content'>        &lt;start&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_start'>start</span><span class='rbrace'>}</span><span class='tstring_content'>&lt;/start&gt;
+</span><span class='embexpr_beg'>        &lt;stop&gt;#{</span><span class='id identifier rubyid_stop'>stop</span><span class='rbrace'>}</span><span class='tstring_content'>&lt;/stop&gt;
+</span><span class='heredoc_end'>      PERIOD
+</span>    <span class='kw'>else</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Date </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_start'>start</span><span class='rbrace'>}</span><span class='tstring_content'> or date </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_stop'>stop</span><span class='rbrace'>}</span><span class='tstring_content'> is incorrect!</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_message'>message</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_message_footer'>message_footer</span>
+
+  <span class='const'>STDERR</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+SENDED:\n</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='id identifier rubyid_message'>message</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n-SENDED\n</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='gvar'>$DEBUG</span>
+  <span class='ivar'>@connection</span><span class='period'>.</span><span class='id identifier rubyid_request_post'>request_post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/report.xml</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_response'>response</span><span class='op'>|</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_response'>response</span>
+    <span class='kw'>when</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTPSuccess</span>
+      <span class='kw'>return</span> <span class='const'>ReportAnswer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_error!'>error!</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="send-instance_method">
+  
+    - (<tt><span class='object_link'><a href="SendAnswer.html" title="Rfsms::SendAnswer (class)">Rfsms::SendAnswer</a></span></tt>) <strong>send</strong>(text, phones, datetime = nil, source = nil, onlydelivery = false) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>???????????????????? text ???? ?????????????????? phones = [].</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>text</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>?????????? ??????????????????</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>phones</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;String, Hash&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>???????????????? ???? ?????????????? ?????????? ????????????????????,
+?????????? ???????? ?????????? ?????? ???????????????? -
+???????????????????????????? ??????????</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>datetime</span>
+      
+      
+        <span class='type'>(<tt>Time</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>?????????? ?? ?????????????? ???????????????????? ??????????????????, nil -
+????????????</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>source</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>?????? ????????????????</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>onlydelivery)</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="SendAnswer.html" title="Rfsms::SendAnswer (class)">Rfsms::SendAnswer</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rfsms.rb', line 190</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='comma'>,</span> <span class='id identifier rubyid_phones'>phones</span><span class='comma'>,</span> <span class='id identifier rubyid_datetime'>datetime</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_source'>source</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_onlydelivery'>onlydelivery</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='id identifier rubyid_message_header'>message_header</span>
+  <span class='id identifier rubyid_message'>message</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;text&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_text'>text</span><span class='rbrace'>}</span><span class='tstring_content'>&lt;/text&gt;</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='kw'>case</span> <span class='id identifier rubyid_phones'>phones</span>
+  <span class='kw'>when</span> <span class='const'>Array</span>
+    <span class='id identifier rubyid_phones'>phones</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_phone'>phone</span><span class='op'>|</span>
+      <span class='id identifier rubyid_message'>message</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  &lt;to number='</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_phone'>phone</span><span class='rbrace'>}</span><span class='tstring_content'>'&gt;&lt;/to&gt;\n</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>when</span> <span class='const'>Hash</span>
+    <span class='id identifier rubyid_phones'>phones</span><span class='period'>.</span><span class='id identifier rubyid_each_pair'>each_pair</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_phone'>phone</span><span class='comma'>,</span> <span class='id identifier rubyid_t'>t</span><span class='op'>|</span>
+      <span class='id identifier rubyid_message'>message</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  &lt;to number='</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_phone'>phone</span><span class='rbrace'>}</span><span class='tstring_content'>'&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_t'>t</span><span class='rbrace'>}</span><span class='tstring_content'>&lt;/to&gt;\n</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_message'>message</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;datetime&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_datetime'>datetime</span><span class='period'>.</span><span class='id identifier rubyid_strftime'>strftime</span><span class='lparen'>(</span><span class='const'>DATEFORMAT</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>&lt;/datetime&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_datetime'>datetime</span>
+  <span class='id identifier rubyid_message'>message</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;source&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source'>source</span><span class='rbrace'>}</span><span class='tstring_content'>&lt;/source&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_source'>source</span>
+  <span class='id identifier rubyid_message'>message</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;onlydelivery&gt;1&lt;/onlydelivery&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_onlydelivery'>onlydelivery</span>
+  <span class='id identifier rubyid_message'>message</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_message_footer'>message_footer</span>
+
+  <span class='const'>STDERR</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+SENDED:\n</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='id identifier rubyid_message'>message</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n-SENDED\n</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='gvar'>$DEBUG</span>
+  <span class='ivar'>@connection</span><span class='period'>.</span><span class='id identifier rubyid_request_post'>request_post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/send.xml</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_response'>response</span><span class='op'>|</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_response'>response</span>
+    <span class='kw'>when</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTPSuccess</span>
+      <span class='kw'>return</span> <span class='const'>SendAnswer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_error!'>error!</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Wed Jan 11 12:17:37 2012 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.7.4 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>
